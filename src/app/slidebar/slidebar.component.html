@@ -1,3 +1,10 @@
-<h1> 
-    Sidebar
-</h1>
+<h4> Structural Directives *ngIf</h4>
+<button class="btn btn-success" (click)="button(1)"> Approve</button>
+<button class="btn btn-danger " (click)="button(0)">Reject</button>
+<p *ngIf="status==1">Approved has beeen clicked</p>
+<p *ngIf="status==0"> Reject has been clicked</p>
+<p *ngIf="status==2"> Press any key</p>
+<hr>
+<h4> Structural Directives *ngFor</h4>
+
+<h5 *ngFor="let name of name">{{name}}</h5>
