@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./slidebar.component.css']
 })
 export class SlidebarComponent implements OnInit {
-
+  name:any=["sansar","sudan",250]
+  status=2
+  button(e:any){
+    this.status=e
+  }
   constructor() { }
 
   ngOnInit(): void {
