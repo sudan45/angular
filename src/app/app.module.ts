@@ -9,6 +9,8 @@ import { MainComponent } from './main/main.component';
 import { ParentComponent } from './parent/parent.component';
 import { Child1Component } from './parent/child1/child1.component';
 import { Child2Component } from './parent/child2/child2.component';
+import { FormsComponent } from './forms/forms.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { Child2Component } from './parent/child2/child2.component';
     MainComponent,
     ParentComponent,
     Child1Component,
-    Child2Component
+    Child2Component,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

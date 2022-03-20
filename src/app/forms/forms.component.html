@@ -1,0 +1,18 @@
+<form #loginform="ngForm" (submit)="getdata(loginform.value)">
+    <label>Username:</label>
+    <input type="text" #name="ngModel" minlength="5"required ngModel name="user" placeholder="Username">
+    <br/>
+    <span *ngIf="name.invalid && name.touched ">Please Provide the valid user </span>
+    <br>
+    <label> Email:</label>
+    <input type="email" #email="ngModel" required email ngModel name="email" placeholder="Email">
+    <br>
+    <span *ngIf="email.invalid && email.touched ">Please Provide the valid Email </span>
+
+    <br>
+    <button type="submt" [disabled]="loginform.invalid"> Submit </button>
+</form>
+<p *ngIf="loginform.submitted"> 
+    user={{userdata.user}}
+    email={{userdata.email}}
+</p>
